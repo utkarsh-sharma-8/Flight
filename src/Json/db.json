@@ -1,0 +1,109 @@
+{
+  "flights": [
+    {
+      "name": "Air India",
+      "From": "Chandigarh",
+      "To": "Delhi",
+      "Price": "7000",
+      "id": 1
+    },
+    {
+      "name": "Indi Go",
+      "From": "Chandigarh",
+      "To": "Delhi",
+      "Price": "8000",
+      "id": 2
+    },
+    {
+      "name": "Vistara",
+      "From": "Chandigarh",
+      "To": "Delhi",
+      "Price": "9000",
+      "id": 3
+    },
+    {
+      "name": "Air India",
+      "From": "Chandigarh",
+      "To": "Mumbai",
+      "Price": "15000",
+      "id": 4
+    },
+    {
+      "name": "Indi Go",
+      "From": "Chandigarh",
+      "To": "Mumbai",
+      "Price": "16000",
+      "id": 5
+    },
+    {
+      "name": "Vistara",
+      "From": "Chandigarh",
+      "To": "Mumbai",
+      "Price": "17000",
+      "id": 6
+    },
+    {
+      "name": "Vistara",
+      "From": "Mumbai",
+      "To": "Chennai",
+      "Price": "10000",
+      "id": 7
+    },
+    {
+      "name": "Air India",
+      "From": "Mumbai",
+      "To": "Chennai",
+      "Price": "11000",
+      "id": 8
+    },
+    {
+      "name": "Indi Go",
+      "From": "Mumbai",
+      "To": "Chennai",
+      "Price": "12000",
+      "id": 9
+    },
+    {
+      "name": "Air India",
+      "From": "Delhi",
+      "To": "America",
+      "Price": "50000",
+      "id": 10
+    },
+    {
+      "name": "Indi Go",
+      "From": "Delhi",
+      "To": "America",
+      "Price": "49000",
+      "id": 11
+    },
+    {
+      "name": "Vistara",
+      "From": "Delhi",
+      "To": "America",
+      "Price": "48000",
+      "id": 12
+    },
+    {
+      "name": "Vistara",
+      "From": "Delhi",
+      "To": "England",
+      "Price": "30000",
+      "id": 13
+    },
+    {
+      "name": "Air India",
+      "From": "Delhi",
+      "To": "England",
+      "Price": "31000",
+      "id": 14
+    },
+    {
+      "name": "Indi Go",
+      "From": "Delhi",
+      "To": "England",
+      "Price": "32000",
+      "id": 15
+    }
+  ]
+}

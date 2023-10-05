@@ -1,13 +1,13 @@
-import React from 'react'
-import { View } from 'react-native'
-import Navigation from './src/Navigation/Navigation'
+import React from 'react';
+import { View } from 'react-native';
+import Navigation from './src/Navigation/Navigation';
 
 const App = () => {
   return (
     <View>
-      <Navigation/>
+      <Navigation />
     </View>
-  )
-}
+  );
+};
 
-export default App
+export default App;

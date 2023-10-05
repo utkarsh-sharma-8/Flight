@@ -1,5 +1,5 @@
 import { Slider } from '@miblanchard/react-native-slider';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pressable, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -8,25 +8,42 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import mainStyle from './MainStyle';
 
 const Main = () => {
+  // to conver date to dateString
   const formatDate = date => {
     return date.toDateString();
   };
+  // to update slider value whenever changed
   const handleSliderChange = value => {
     setSliderValue(value);
   };
-  const [twoWay, setTwoWay] = useState(false);
-  const [sliderValue, setSliderValue] = useState(1);
-  const [from, setFrom] = useState('');
-  const [to, setTo] = useState('');
-  const [date, setDate] = useState(new Date().toDateString());
-  const [returnDate, setReturnDate] = useState(new Date(date).toDateString());
-  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
-  const [isReturnDatePickerVisible, setReturnDatePickerVisible] =
-    useState(false);
+
+  //to fetch data from json file
+  const apiData = async() =>{
+    const url ="http://10.0.2.2:3000/flights"
+    let result = await fetch (url)
+    result = await result.json()
+    console.log(result)
+  }
+  useEffect(()=>{
+    apiData()
+  },[])
+
+  const [twoWay, setTwoWay] = useState(false); //for return date option
+  const [sliderValue, setSliderValue] = useState(1); //slider value above slider
+  const [from, setFrom] = useState(''); //text input  From
+  const [to, setTo] = useState(''); //Text input to
+  const [date, setDate] = useState(new Date().toDateString()); //to print default date before choosing from date picker
+  const [returnDate, setReturnDate] = useState(new Date(date).toDateString()); //for return date
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false); //date picker for flights
+  const [isReturnDatePickerVisible, setReturnDatePickerVisible] = useState(false); //return date picker
+    
+  //function when date on date picker is selected
   const handleConfirm = date => {
     setDate(formatDate(date));
     setDatePickerVisibility(false);
   };
+
+  //function when return date is selected
   const handleTwoWayConfirm = date => {
     setReturnDate(formatDate(date));
     setReturnDatePickerVisible(false);
@@ -34,6 +51,8 @@ const Main = () => {
   return (
     <View style={mainStyle.mainView}>
       <View style={mainStyle.firstView}>
+
+        {/* one way tab */}
         <TouchableOpacity
           style={mainStyle.touchable}
           onPress={() => {
@@ -47,6 +66,8 @@ const Main = () => {
             One Way
           </Text>
         </TouchableOpacity>
+
+        {/* return tab */}
         <TouchableOpacity
           style={mainStyle.touchable}
           onPress={() => setTwoWay(true)}>
@@ -59,6 +80,8 @@ const Main = () => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      {/* From text input */}
       <View style={mainStyle.placeView}>
         <EvilIcons name="location" size={25} style={{marginTop: '4%'}} />
         <TextInput
@@ -71,6 +94,8 @@ const Main = () => {
           }}
         />
       </View>
+
+      {/* to text input */}
       <View style={mainStyle.placeView}>
         <EvilIcons name="location" size={25} style={{marginTop: '4%'}} />
         <TextInput
@@ -83,6 +108,8 @@ const Main = () => {
           }}
         />
       </View>
+
+      {/* To select the date picker */}
       <View style={mainStyle.calendarView}>
         <Pressable
           style={mainStyle.pressable}
@@ -107,6 +134,8 @@ const Main = () => {
             <Text style={mainStyle.date}>{date}</Text>
           </View>
         </Pressable>
+
+        {/* Date picker */}
         {twoWay ? (
           <Pressable
             style={mainStyle.pressable}
@@ -131,6 +160,8 @@ const Main = () => {
           </Pressable>
         ) : null}
       </View>
+
+      {/* slider  to selct price */}
       <View style={mainStyle.sliderView}>
         <Slider
           maximumTrackStyle={{maxWidth: 'auto'}}
@@ -151,12 +182,14 @@ const Main = () => {
                 marginBottom: -5,
               }}>
               <Text style={{color: 'white', paddingLeft: 2}}>
-                {sliderValue * 1000}
+                ₹{sliderValue * 1000}
               </Text>
             </View>
           )}
         />
       </View>
+
+      {/* Search button */}
       <View style={mainStyle.searchView}>
         <TouchableOpacity style={mainStyle.searchOpacity}>
           <AntDesign
@@ -169,7 +202,6 @@ const Main = () => {
         </TouchableOpacity>
       </View>
     </View>
-  )
-}
-
-export default Main
+  );
+};
+export default Main;
