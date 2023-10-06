@@ -5,20 +5,26 @@
       "From": "Chandigarh",
       "To": "Delhi",
       "Price": "7000",
+      "Departure":"9:00",
+      "Arrival":"12:00",
       "id": 1
     },
     {
       "name": "Indi Go",
       "From": "Chandigarh",
       "To": "Delhi",
-      "Price": "8000",
+      "Price": "10000",
+      "Departure":"13:00",
+      "Arrival":"15:00",
       "id": 2
     },
     {
       "name": "Vistara",
       "From": "Chandigarh",
       "To": "Delhi",
-      "Price": "9000",
+      "Price": "12000",
+      "Departure":"18:00",
+      "Arrival":"19:00",
       "id": 3
     },
     {
@@ -26,6 +32,8 @@
       "From": "Chandigarh",
       "To": "Mumbai",
       "Price": "15000",
+      "Departure":"9:00",
+      "Arrival":"11:00",
       "id": 4
     },
     {
@@ -33,6 +41,8 @@
       "From": "Chandigarh",
       "To": "Mumbai",
       "Price": "16000",
+      "Departure":"12:00",
+      "Arrival":"16:00",
       "id": 5
     },
     {
@@ -40,6 +50,8 @@
       "From": "Chandigarh",
       "To": "Mumbai",
       "Price": "17000",
+      "Departure":"15:00",
+      "Arrival":"18:00",
       "id": 6
     },
     {
@@ -47,6 +59,8 @@
       "From": "Mumbai",
       "To": "Chennai",
       "Price": "10000",
+      "Departure":"9:00",
+      "Arrival":"12:00",
       "id": 7
     },
     {
@@ -54,6 +68,8 @@
       "From": "Mumbai",
       "To": "Chennai",
       "Price": "11000",
+      "Departure":"13:00",
+      "Arrival":"15:00",
       "id": 8
     },
     {
@@ -61,27 +77,35 @@
       "From": "Mumbai",
       "To": "Chennai",
       "Price": "12000",
+      "Departure":"18:00",
+      "Arrival":"19:00",
       "id": 9
     },
     {
       "name": "Air India",
       "From": "Delhi",
       "To": "America",
-      "Price": "50000",
+      "Price": "45000",
+      "Departure":"6:00",
+      "Arrival":"22:00",
       "id": 10
     },
     {
       "name": "Indi Go",
       "From": "Delhi",
       "To": "America",
-      "Price": "49000",
+      "Price": "50000",
+      "Departure":"9:00",
+      "Arrival":"23:00",
       "id": 11
     },
     {
       "name": "Vistara",
       "From": "Delhi",
       "To": "America",
-      "Price": "48000",
+      "Price": "55000",
+      "Departure":"11:00",
+      "Arrival":"23:00",
       "id": 12
     },
     {
@@ -89,6 +113,8 @@
       "From": "Delhi",
       "To": "England",
       "Price": "30000",
+      "Departure":"8:00",
+      "Arrival":"15:00",
       "id": 13
     },
     {
@@ -96,6 +122,8 @@
       "From": "Delhi",
       "To": "England",
       "Price": "31000",
+      "Departure":"11:00",
+      "Arrival":"16:00",
       "id": 14
     },
     {
@@ -103,7 +131,9 @@
       "From": "Delhi",
       "To": "England",
       "Price": "32000",
-      "id": 15
+      "Departure":"13:00",
+      "Arrival":"18:00",
+      "id": 1
     }
   ]
 }
